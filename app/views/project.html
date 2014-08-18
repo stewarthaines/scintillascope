@@ -1,0 +1,15 @@
+<p>Scintillascope from RobotInaBox</p>
+
+<h1>Project</h1>
+
+<div dropbox-auth></div>
+
+<div dropbox-select path="projects" selectedFilename="projectFilename"></div>
+
+<h2>Graph</h2>
+
+size: <input id="graph_size" size="10" ng-init="graphSize = state.graphSize" ng-model="graphSize" placeholder="WxH"/> <button ng-click="state.graphSize = graphSize">Apply</button>
+
+<button ng-show="!running" ng-click="toggleRunning()">Run</button>
+<button ng-show="running" ng-click="toggleRunning()">Pause</button>
+
