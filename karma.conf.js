@@ -18,16 +18,20 @@ module.exports = function(config) {
 		'app/bower_components/angular-sanitize/angular-sanitize.js',
 		'app/bower_components/angular-route/angular-route.js',
 		'app/bower_components/angular-bootstrap/ui-bootstrap.js',
+		'app/bower_components/ngDropbox/dropbox.js',
 		'app/scripts/*.js',
 		'app/scripts/**/*.js',
 		'test/mock/**/*.js',
 		'test/spec/**/*.js'
 		],
 
+		reporters: ['dots', 'junit'],
+
 		// list of files / patterns to exclude
 		exclude: [],
 
 		plugins: [
+		'karma-junit-reporter',
 		'karma-jasmine',
 		'karma-phantomjs-launcher'
 		],
@@ -57,6 +61,6 @@ module.exports = function(config) {
 
 		// Continuous Integration mode
 		// if true, it capture browsers, run tests and exit
-		singleRun: false
+		singleRun: true
 	});
 };
