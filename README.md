@@ -20,3 +20,9 @@ $ grunt serve
 ## Dropbox auth popup
 
 The browser may block the Dropbox auth popup, so check that popups are allowed for localhost:9000
+
+## Unit tests
+
+```
+karma start
+```

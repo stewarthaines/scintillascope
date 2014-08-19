@@ -13,7 +13,7 @@
     "bootstrap": "~3.2.0",
     "three.js": "*",
     "threejs": "*",
-    "ngDropbox": "git@github.com:christiansmith/ngDropbox.git"
+    "ngDropbox": "https://github.com/christiansmith/ngDropbox.git"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.22",
