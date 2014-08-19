@@ -2,6 +2,7 @@
 
 Scintillascope is a web-based interactive painting generator
 
+[![Build Status](https://travis-ci.org/stewarthaines/scintillascope.svg?branch=master)](https://travis-ci.org/stewarthaines/scintillascope)
 
 ## Development
 
