@@ -17,7 +17,7 @@ angular.module('scintillascope', [
 
 	$routeProvider
 	.when('/home', {
-		templateUrl: 'views/main.html',
+		templateUrl: 'main/main.html',
 		controller: 'MainCtrl'
 	})
 	.otherwise({

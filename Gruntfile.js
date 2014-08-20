@@ -28,7 +28,7 @@ module.exports = function (grunt) {
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+        files: ['<%= yeoman.app %>/**/*.js', '!<%= yeoman.app %>/bower_components/**/*'],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: true
@@ -39,7 +39,7 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+        files: ['<%= yeoman.app %>/**/*.css', '!<%= yeoman.app %>/bower_components/**/*'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
       gruntfile: {
@@ -100,13 +100,17 @@ module.exports = function (grunt) {
       },
       all: [
         'Gruntfile.js',
-        '<%= yeoman.app %>/scripts/{,*/}*.js'
+        '<%= yeoman.app %>/**/*.js',
+        '!<%= yeoman.app %>/bower_components/**/*'
       ],
       test: {
         options: {
           jshintrc: 'test/.jshintrc'
         },
-        src: ['test/spec/{,*/}*.js']
+        src: [
+          '<%= yeoman.app %>/**/*_test.js',
+          '!<%= yeoman.app %>/bower_components/**/*'
+        ]
       }
     },
 
@@ -148,16 +152,13 @@ module.exports = function (grunt) {
       }
     },
 
-
-
-
-
     // Renames files for browser caching purposes
     rev: {
       dist: {
         files: {
           src: [
-            '<%= yeoman.dist %>/scripts/{,*/}*.js',
+            '!<%= yeoman.app %>/bower_components/**/*',
+            '<%= yeoman.dist %>/**/*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
             '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/styles/fonts/*'

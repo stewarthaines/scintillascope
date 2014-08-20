@@ -159,10 +159,14 @@ angular.module('scintillascope')
 						// resizing shouldn't clear the canvas
 						// so we might have to do some work to preserve
 						// what has already been drawn
-						/*element.css({
-							width: window.innerWidth,
-							height: window.innerHeight
-						});*/
+						element.css({
+							width: '100%',
+							height: '100%'
+						});
+
+						//window.innerWidth,
+						//window.innerHeight
+
 						draw();
 					}
 				}

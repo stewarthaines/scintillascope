@@ -16,7 +16,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="main/main.css">
     <!-- endbuild -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   </head>
@@ -52,12 +52,12 @@
     <script src="bower_components/ngDropbox/dropbox.js"></script>
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/directives/graph.js"></script>
-        <script src="scripts/directives/swatch.js"></script>
-        <script src="scripts/directives/dropbox-auth.js"></script>
-        <script src="scripts/directives/dropbox-select.js"></script>
+        <script src="app.js"></script>
+        <script src="main/main_controller.js"></script>
+        <script src="graph/graph_directive.js"></script>
+        <script src="swatch/swatch_directive.js"></script>
+        <script src="dropbox/dropbox_auth_directive.js"></script>
+        <script src="dropbox/dropbox_select_directive.js"></script>
         <!-- endbuild -->
 </body>
 </html>

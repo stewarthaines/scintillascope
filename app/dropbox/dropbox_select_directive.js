@@ -3,7 +3,7 @@
 angular.module('scintillascope')
 .directive('dropboxSelect', function (Dropbox) {
 	return {
-		templateUrl: 'views/dropbox-select.html',
+		templateUrl: 'dropbox/dropbox_select.html',
 		restrict: 'EA',
 		scope: {
 			path: '=',

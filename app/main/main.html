@@ -1,25 +1,11 @@
 	<canvas graph running="running" size="{{ state.graphSize }}" project="{{ currentProject }}" class="main_graph" ng-click="toggleControls()"></canvas>
 
-	<canvas swatch="{{ currentTile }}" class="swatch" ng-show="oscillatorIsOpen && showControls"></canvas>
-
 	<div class="controls" ng-show="showControls">
 		<div accordion close-others="oneAtATime">
 			<div accordion-group is-open="$parent.projectIsOpen">
 				<div ng-click="$parent.projectIsOpen = true" accordion-heading>Project / Graph</div>
 
-				<div ng-include="'/views/project.html'"></div>
-			</div>
-
-			<div accordion-group heading="Oscillator" is-open="$parent.oscillatorIsOpen">
-				<div ng-include="'/views/oscillator.html'"></div>
-			</div>
-
-			<div accordion-group heading="Audio" is-open="$parent.audioIsOpen">
-				<div ng-include="'/views/audio.html'"></div>
-			</div>
-
-			<div accordion-group heading="Brush" is-open="$parent.brushIsOpen">
-				<div ng-include="'/views/brush.html'"></div>
+				<div ng-include="'/main/project.html'"></div>
 			</div>
 
 		</div>

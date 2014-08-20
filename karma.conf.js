@@ -19,10 +19,10 @@ module.exports = function(config) {
 		'app/bower_components/angular-route/angular-route.js',
 		'app/bower_components/angular-bootstrap/ui-bootstrap.js',
 		'app/bower_components/ngDropbox/dropbox.js',
-		'app/scripts/*.js',
-		'app/scripts/**/*.js',
-		'test/mock/**/*.js',
-		'test/spec/**/*.js'
+		'app/app.js',
+		'app/main/*.js',
+		'app/dropbox/*.js',
+		'app/graph/*.js',
 		],
 
 		reporters: ['dots', 'junit'],
