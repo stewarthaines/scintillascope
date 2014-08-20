@@ -28,14 +28,18 @@ module.exports = function (grunt) {
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       js: {
-        files: ['<%= yeoman.app %>/**/*.js', '!<%= yeoman.app %>/bower_components/**/*'],
+        files: [
+        '<%= yeoman.app %>/**/*.js',
+        '!<%= yeoman.app %>/bower_components/**/*',
+        '!<%= yeoman.app %>/**/*_test.js'
+        ],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: true
         }
       },
       jsTest: {
-        files: ['test/spec/{,*/}*.js'],
+        files: ['<%= yeoman.app %>/**/*_test.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
       styles: {
@@ -157,8 +161,8 @@ module.exports = function (grunt) {
       dist: {
         files: {
           src: [
-            '!<%= yeoman.app %>/bower_components/**/*',
             '<%= yeoman.dist %>/**/*.js',
+            '!<%= yeoman.app %>/bower_components/**/*',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
             '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/styles/fonts/*'

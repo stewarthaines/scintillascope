@@ -1,7 +1,3 @@
-body {
-	min-width: 1024px;
-}
-
 .container, html, body {
   padding: 0;
   margin: 0;
@@ -14,7 +10,7 @@ body {
 canvas.main_graph {
 	margin: 0;
 	padding: 0;
-	background-color: rgba(255, 0, 0, 0.2);
+	background-color: white; /*rgba(255, 0, 0, 0.2);*/
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -26,19 +22,6 @@ canvas {
 	image-rendering: optimizeSpeed;
 }
 */
-canvas.swatch {
-	position: absolute;
-	/* fixed size */
-	width: 512px;
-	height: 512px;
-
-	/* centered vertically and in the horizontal space right of panel-group */
-	margin-left: 0;
-	left: 50%;
-	top: 50%;
-	margin-top: -256px;
-	background-color: rgba(0, 255, 0, 0.2);
-}
 
 .controls {
 	position: absolute;

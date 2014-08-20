@@ -116,9 +116,10 @@ angular.module('scintillascope')
 /*				webkitImageSmoothingEnabled: false,
 				imageSmoothingEnabled: false,*/
 				preserveDrawingBuffer: true,
+				alpha: true,
 				canvas: element[0]
 			});
-
+			//renderer.setClearColor( 0xffffff, 1);
 			//var c = element[0].getContext('webgl');
 			//c.imageSmoothingEnabled = false;
 			renderer.getContext().imageSmoothingEnabled = false;
@@ -167,6 +168,9 @@ angular.module('scintillascope')
 						//window.innerWidth,
 						//window.innerHeight
 
+						camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+						camera.position.z = 1000;
+						
 						draw();
 					}
 				}

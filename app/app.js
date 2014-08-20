@@ -7,7 +7,7 @@ angular.module('scintillascope', [
 	'ngRoute',
 	'dropbox',
 	'ui.bootstrap'
-	])
+])
 .config(function ($routeProvider, DropboxProvider) {
 
 	DropboxProvider.config(
