@@ -1,13 +1,13 @@
-	<canvas graph running="running" size="{{ state.graphSize }}" project="{{ currentProject }}" class="main_graph" ng-click="toggleControls()"></canvas>
+<canvas graph running="running" size="{{ state.graphSize }}" project="{{ currentProject }}" class="main_graph" ng-click="toggleControls()"></canvas>
 
-	<div class="controls" ng-show="showControls">
-		<div accordion close-others="oneAtATime">
-			<div accordion-group is-open="$parent.projectIsOpen">
-				<div ng-click="$parent.projectIsOpen = true" accordion-heading>Project</div>
+<div class="controls" ng-show="showControls">
+	<div accordion close-others="oneAtATime">
+		<div accordion-group is-open="$parent.projectIsOpen">
+			<div ng-click="$parent.projectIsOpen = true" accordion-heading>Project</div>
 
-				<div ng-include="'/main/project.html'"></div>
-			</div>
-
+			<div ng-include="'/main/project.html'"></div>
 		</div>
 
 	</div>
+
+</div>
