@@ -19,7 +19,8 @@ angular.module('scintillascope')
   });
 */
 
-    // initial state, perhaps eventually persisted and restored
+  
+        // initial state, perhaps eventually persisted and restored
     $scope.projectIsOpen = true;
 
     $scope.running = true;
@@ -30,7 +31,8 @@ angular.module('scintillascope')
     $scope.showControls = true;
 
     $scope.state = {
-      graphSize: '100x100'
+    pixelated: false,
+    graphSize: '100x100'
     };
 
     $scope.toggleRunning = function toggleRunningFn() {

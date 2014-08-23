@@ -16,11 +16,11 @@ angular.module('scintillascope', [
 		);
 
 	$routeProvider
-	.when('/home', {
+	.when('/', {
 		templateUrl: 'main/main.html',
 		controller: 'MainCtrl'
 	})
 	.otherwise({
-		redirectTo: '/home'
+		redirectTo: '/'
 	});
 });

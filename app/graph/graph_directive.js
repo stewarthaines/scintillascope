@@ -15,7 +15,7 @@ angular.module('scintillascope')
       _tick,
       _width,
       _height;
-      //_twoPi = Math.PI * 2;
+    //_twoPi = Math.PI * 2;
 
     var draw = function drawFn() {
       console.log('draw');
@@ -108,7 +108,7 @@ angular.module('scintillascope')
 
         geometry = new THREE.BoxGeometry(200, 200, 200);
         material = new THREE.MeshBasicMaterial({
-          color: 0xfff000,
+          color: 0xff0000,
           wireframe: false
         });
 
@@ -126,8 +126,11 @@ angular.module('scintillascope')
         //renderer.setClearColor( 0xffffff, 1);
         //var c = element[0].getContext('webgl');
         //c.imageSmoothingEnabled = false;
-        renderer.getContext().imageSmoothingEnabled = false;
-        console.log(renderer);
+        var c = renderer.getContext()
+        c.imageSmoothingEnabled = false;
+        c.mozImageSmoothingEnabled = false;
+        c.oImageSmoothingEnabled = false;
+        c.webkitImageSmoothingEnabled = false;
 
         renderer.autoClearColor = false;
 
@@ -142,6 +145,10 @@ angular.module('scintillascope')
 
         attrs.$observe('project', function(newValue) {
           console.log(newValue);
+        });
+
+        attrs.$observe('pixelated', function(newValue) {
+          draw();
         });
 
         attrs.$observe('size', function(newValue) {
