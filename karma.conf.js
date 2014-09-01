@@ -22,6 +22,7 @@ module.exports = function(config) {
 			'app/app.js',
 			'app/main/*.js',
 			'app/dropbox/*.js',
+			'app/services/*.js',
 			'app/graph/*.js',
 		],
 

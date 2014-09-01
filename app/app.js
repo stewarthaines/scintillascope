@@ -19,8 +19,8 @@ angular.module('scintillascope', [
 	.when('/', {
 		templateUrl: 'main/main.html',
 		resolve: {
-			credentials: function() {
-				return angular.fromJson(localStorage['ngDropbox.oauth']).promise;
+			credentials: function(PersistenceService) {
+				return PersistenceService.getCredentials();
 			}
 		},
 		controller: 'MainCtrl'
