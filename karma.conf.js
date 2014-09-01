@@ -11,29 +11,42 @@ module.exports = function(config) {
 
 		// list of files / patterns to load in the browser
 		files: [
-		'app/bower_components/angular/angular.js',
-		'app/bower_components/angular-mocks/angular-mocks.js',
-		'app/bower_components/angular-resource/angular-resource.js',
-		'app/bower_components/angular-cookies/angular-cookies.js',
-		'app/bower_components/angular-sanitize/angular-sanitize.js',
-		'app/bower_components/angular-route/angular-route.js',
-		'app/bower_components/angular-bootstrap/ui-bootstrap.js',
-		'app/bower_components/ngDropbox/dropbox.js',
-		'app/app.js',
-		'app/main/*.js',
-		'app/dropbox/*.js',
-		'app/graph/*.js',
+			'app/bower_components/angular/angular.js',
+			'app/bower_components/angular-mocks/angular-mocks.js',
+			'app/bower_components/angular-resource/angular-resource.js',
+			'app/bower_components/angular-cookies/angular-cookies.js',
+			'app/bower_components/angular-sanitize/angular-sanitize.js',
+			'app/bower_components/angular-route/angular-route.js',
+			'app/bower_components/angular-bootstrap/ui-bootstrap.js',
+			'app/bower_components/ngDropbox/dropbox.js',
+			'app/app.js',
+			'app/main/*.js',
+			'app/dropbox/*.js',
+			'app/graph/*.js',
 		],
 
-		reporters: ['dots', 'junit'],
-
 		// list of files / patterns to exclude
-		exclude: [],
+		exclude: [
+//			'app/**/*_test.js'
+		],
+
+		reporters: ['dots', 'junit', 'coverage' ],
+
+		/* nothing from bower_components, app/*.js, then app/**\/*.js, except *_test.js */
+		preprocessors: {
+			'app/{*,**!(bower_components)/!(*_test)}.js': [ 'coverage' ]
+		},
+
+		coverageReporter: {
+			type : 'html',
+			dir : 'coverage/'
+		},
 
 		plugins: [
-		'karma-junit-reporter',
-		'karma-jasmine',
-		'karma-phantomjs-launcher'
+			'karma-coverage',
+			'karma-junit-reporter',
+			'karma-jasmine',
+			'karma-phantomjs-launcher'
 		],
 
 		// web server port
