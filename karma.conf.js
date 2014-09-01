@@ -39,6 +39,9 @@ module.exports = function(config) {
 
 		coverageReporter: {
 			type : 'html',
+			subdir: function(browser) {
+				return browser.toLowerCase().split(/[ /-]+/)[0];
+			},
 			dir : 'coverage/'
 		},
 
