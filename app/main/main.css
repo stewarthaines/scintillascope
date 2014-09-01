@@ -5,7 +5,7 @@
 .panel-group {
   width: 512px;
 }
-canvas.main_graph {
+canvas.main-graph {
   margin: 0;
   padding: 0;
   background-color: white;

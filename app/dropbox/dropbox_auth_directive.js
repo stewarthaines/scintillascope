@@ -1,6 +1,7 @@
-'use strict';
+(function() {
+  'use strict';
 
-angular.module('scintillascope')
+  angular.module('scintillascope')
   .directive('dropboxAuth', function() {
     return {
       template: '<div><button ng-show="!account" ng-click="authenticate()">Sign in</button> <span ng-show="account">{{ account.display_name }}</span></div>',
@@ -51,8 +52,7 @@ angular.module('scintillascope')
 
       },
       link: function postLink() {
-        //element.text('this is the DropboxAuth directive');
-        //console.log('here');
       }
     };
   });
+})();
