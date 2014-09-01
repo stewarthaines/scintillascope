@@ -18,6 +18,11 @@ angular.module('scintillascope', [
 	$routeProvider
 	.when('/', {
 		templateUrl: 'main/main.html',
+		resolve: {
+			credentials: function() {
+				return angular.fromJson(localStorage['ngDropbox.oauth']).promise;
+			}
+		},
 		controller: 'MainCtrl'
 	})
 	.otherwise({
