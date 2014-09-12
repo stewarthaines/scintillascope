@@ -6,7 +6,7 @@
       $scope,
       Dropbox,
       credentials
-      ) {
+    ) {
 
       if (credentials) {
         Dropbox.setCredentials(credentials);

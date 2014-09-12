@@ -1,6 +1,6 @@
 {
   "name": "scintillascope",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "dependencies": {
     "angular": "~1.2.22",
     "json3": "~3.3.2",
@@ -11,7 +11,6 @@
     "angular-route": "~1.2.22",
     "angular-bootstrap": "~0.10.0",
     "bootstrap": "~3.2.0",
-    "three.js": "*",
     "threejs": "*",
     "ngDropbox": "https://github.com/christiansmith/ngDropbox.git"
   },

@@ -33,17 +33,29 @@ module.exports = function(config) {
 
 		reporters: ['dots', 'junit', 'coverage' ],
 
+		junitReporter: {
+			outputFile: 'shippable/testresults/result.xml',
+			suite: ''
+		},
+
 		/* nothing from bower_components, app/*.js, then app/**\/*.js, except *_test.js */
 		preprocessors: {
 			'app/{*,**!(bower_components)/!(*_test)}.js': [ 'coverage' ]
 		},
 
 		coverageReporter: {
-			type : 'html',
-			subdir: function(browser) {
-				return browser.toLowerCase().split(/[ /-]+/)[0];
+			reporters: [
+			{
+				type : 'html',
+				subdir: function(browser) {
+					return browser.toLowerCase().split(/[ /-]+/)[0];
+				},
+				dir : 'coverage/'
 			},
-			dir : 'coverage/'
+			{
+				type : 'cobertura'
+			}
+			]
 		},
 
 		plugins: [
